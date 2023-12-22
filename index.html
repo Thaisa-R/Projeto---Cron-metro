@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Cronômetro</title>
+</head>
+
+<body>
+    <div class="caixa">
+        <h1 class="name">Cronômetro</h1>
+        <h2><span class="minutos"><b>00</b></span>:<span class="segundos"><b>00</b></span>:<span class="milsegundos"><b>00</b></span></h2>
+    </div>
+    <div class="caixa-2">
+        <button onclick="start()">Iniciar</button>
+        <button onclick="stop()">Parar</button>
+        <button onclick="reset()">Zerar</button>
+    </div>
+</body>
+
+<script>
+
+    const milseg = document.querySelector(".milsegundos")
+    const seg = document.querySelector(".segundos")
+    const min = document.querySelector(".minutos")
+
+    let milNum = 0
+    let segNum = 0
+    let minNum = 0
+    let countdown
+
+
+    function milsegundos() {
+        milNum++
+        if (milNum < 10) {
+            milseg.innerHTML = '0' + milNum
+        } else {
+            milseg.innerHTML = milNum
+        }
+
+        if (milNum == 99) {
+            milNum = 0
+            segundos()
+        }
+    }
+
+    function segundos() {
+        segNum++
+        if (segNum < 10) {
+            seg.innerHTML = '0' + segNum
+        } else {
+            seg.innerHTML = segNum
+        }
+
+        if (segNum == 59) {
+            segNum = 0
+            minutos()
+        }
+    }
+
+    function minutos() {
+        minNum++
+        if (minNum < 10) {
+            min.innerHTML = '0' + minNum
+        } else {
+            min.innerHTML = minNum
+        }
+    }
+
+    function start() {
+        clearInterval(countdown)
+        countdown = setInterval(() => {
+            milsegundos()
+        }, 10)
+    }
+
+    function stop() {
+        clearInterval(countdown)
+    }
+
+    function reset() {
+        clearInterval(countdown)
+        milNum = 0
+        segNum = 0
+        minNum = 0
+        milseg.innerHTML = '00'
+        seg.innerHTML = '00'
+        min.innerHTML = '00'
+    }
+</script>
+
+</html>
