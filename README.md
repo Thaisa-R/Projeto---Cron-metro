@@ -1,6 +1,6 @@
 <h1>Projeto Cronômetro</h1>
 
-<h2>O Projeto Cronômetro, teve início no aprendizado em JavaScript sobre: ClearInterval, SetInterval e Operadores de Comparação, este cronômetro possibilita contar os milissegundos, segundos, minutos e horas, com o intuito de auxiliar em um treino na academia, na preparação de algum prato/refeição, entre outros.. Ele inicia ao clicar no botão iniciar, tem as funçôes de parar e zerar, para que possa reiniciá-lo basta apertar o botão zerar ou atualizar a página.</h2>
+<h2>O Projeto Cronômetro, teve início no aprendizado em JavaScript sobre: ClearInterval, SetInterval e Operadores de Comparação, este cronômetro possibilita contar os milissegundos, segundos, minutos e horas, com o intuito de auxiliar em um treino na academia, na preparação de algum prato/refeição, entre outros.. Ele inicia ao clicar no botão iniciar, tem as funções de parar e zerar, para que possa reiniciá-lo basta apertar o botão zerar ou atualizar a página.</h2>
 
 <h3>Esse foi um projeto que eu aprendi no curso <a href="https://rodolfomori.com.br/devclub">DevClub</a>!</h3>
 <h4>Tecnologias utilizadas:</h4>
